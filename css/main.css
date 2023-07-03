@@ -1708,6 +1708,7 @@ article.article--modalidad {
 }
 @media (min-width: 720px) {
   article.article--modalidad {
+    margin-bottom: 0px;
     padding: 0px 40px 40px 40px;
   }
 }
@@ -1754,11 +1755,78 @@ article.article--modalidad .article__icon {
 article.article--modalidad .article__icon img {
   width: 30px;
 }
-article.article--modalidad .article__body {
-  text-align: left;
+article.article--coaching {
+  background-color: transparent;
+  padding: 0px 20px 20px 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border-radius: 11px;
+  min-height: 150px;
+  margin-bottom: 40px;
 }
-article.article--modalidad .article__body .article__title {
-  color: #6084a9;
+@media (min-width: 720px) {
+  article.article--coaching {
+    padding: 0px 40px 40px 40px;
+    margin-bottom: 0px;
+  }
+}
+article.article--coaching:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffd8b1;
+  width: 90%;
+  height: 2px;
+}
+@media (min-width: 720px) {
+  article.article--coaching:after {
+    width: 2px;
+    height: 80%;
+    left: initial;
+    right: 0;
+    top: 50%;
+  }
+}
+article.article--coaching .article__icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  top: -25px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  min-width: 80px;
+  background-color: #fff;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  margin: 0 auto;
+}
+article.article--coaching .article__icon img {
+  width: 30px;
+}
+article.article--coaching .article__body {
+  text-align: center;
+}
+article.article--coaching .article__body .article__description {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #434554;
 }
 article.article--service {
   backdrop-filter: blur(5px);
@@ -4398,6 +4466,9 @@ section.section--media .section__bg {
 section.section--media .section__body {
   margin-bottom: 0;
 }
+section.section--media .section__body .section__content {
+  color: #1a205e;
+}
 @media (min-width: 720px) {
   section.section--media .section__body .section__content {
     padding: 40px;
@@ -4424,9 +4495,6 @@ section.section--media .section__body .section__content .section__title {
     font-size: 46px;
     line-height: 60px;
   }
-}
-section.section--media .section__body .section__content .section__description {
-  color: #1a205e;
 }
 section.section--media .section__body .section__content .section__description strong {
   font-size: 20px;
@@ -4461,8 +4529,25 @@ section.section--media.section--media--blue .section__body {
   background: linear-gradient(160deg, rgba(255,255,255,0.8) 22%, #d4f3fd 72%);
   padding: 20px;
 }
+section.section--media.section--media--blue .section__body .section__content {
+  color: $434554;
+}
 section.section--media.section--media--blue .section__body .section__content .section__title {
   background: linear-gradient(#424fd2, #1a205e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+section.section--media.section--media--orange .section__body {
+  background: #fff;
+  background: linear-gradient(160deg, rgba(255,255,255,0.8) 10%, #ffe6cd 90%);
+  padding: 20px;
+}
+section.section--media.section--media--orange .section__body .section__content {
+  color: #434554;
+}
+section.section--media.section--media--orange .section__body .section__content .section__title {
+  background: linear-gradient(#f3c69b, #df842c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -4743,6 +4828,10 @@ section.section--serviceprice .section__available .section__languages .section__
   font-weight: bold;
   margin-bottom: 0;
 }
+section.section--modalidades.section--modalidades--grad {
+  background: #fff;
+  background: linear-gradient(160deg, #fff 10%, #d4f3fd 50%, rgba(255,255,255,0.4) 90%);
+}
 section.section--modalidades .section__header {
   margin-bottom: 80px;
   text-align: center;
@@ -4779,6 +4868,32 @@ section.section--modalidades .section__body {
 }
 section.section--modalidades .section__body .cols .col-md-4:last-child .article--modalidad:after {
   display: none;
+}
+section.section--modalidades .section__footer {
+  margin-top: 100px;
+}
+section.section--modalidades .section__footer .section__box {
+  border-radius: 11px;
+  border: 2px solid #fff;
+  background: #424fd2;
+  background: linear-gradient(200deg, rgba(66,79,210,0.303) 22%, #1a205e 72%);
+  color: #fff;
+  padding: 20px;
+  min-height: 250px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+section.section--modalidades .section__footer .section__box .section__box__content {
+  color: #fff;
+  text-align: center;
+}
+section.section--modalidades .section__footer .section__box .section__box__content .section__title {
+  color: #fff;
+  margin-bottom: 40px;
 }
 section.section--marcas {
   background: #fff;
@@ -4889,6 +5004,67 @@ section.section--services--2 .section__header .section__title {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+section.section--coaching {
+  background: #fff;
+  background: linear-gradient(160deg, rgba(255,255,255,0.8) 22%, #d4f3fd 72%);
+  padding: 20px;
+}
+section.section--coaching .section__content {
+  color: $434554;
+}
+section.section--coaching .section__content .section__title {
+  background: linear-gradient(#424fd2, #1a205e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+section.section--coaching .section__header {
+  margin-bottom: 80px;
+}
+section.section--coaching .section__body {
+  margin-bottom: 100px;
+}
+section.section--coaching .section__body .section__coaching {
+  border-radius: 11px;
+  border: 2px solid #ffd8b1;
+  background-color: rgba(255,255,255,0.8);
+}
+section.section--coaching .section__body .section__coaching .cols .col-md-4:last-child .article--coaching:after {
+  display: none;
+}
+section.section--expertos {
+  background: #fff;
+  background: linear-gradient(160deg, #fff 10%, #d4f3fd 50%, rgba(255,255,255,0.4) 90%);
+}
+section.section--expertos .section__bg {
+  opacity: 0.3;
+}
+section.section--expertos .section__footer {
+  margin-top: 100px;
+}
+section.section--expertos .section__footer .section__box {
+  border-radius: 11px;
+  border: 2px solid #fff;
+  background: #424fd2;
+  background: linear-gradient(200deg, rgba(66,79,210,0.303) 22%, #1a205e 72%);
+  color: #fff;
+  padding: 20px;
+  min-height: 250px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+section.section--expertos .section__footer .section__box .section__box__content {
+  color: #fff;
+  text-align: center;
+}
+section.section--expertos .section__footer .section__box .section__box__content .section__title {
+  color: #fff;
+  margin-bottom: 20px;
 }
 .slider {
   position: relative;
