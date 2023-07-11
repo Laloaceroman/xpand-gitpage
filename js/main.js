@@ -940,6 +940,10 @@ app.swiper = {
       spaceBetween: 0,
       centeredSlides: true,
       loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
       autoplay: {
         delay: 5000,
         disableOnInteraction: false
